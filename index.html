@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
     <title>Visionary Syntax. | Premium Assets</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -233,6 +233,10 @@
     </style>
 </head>
 <body class="bg-[#fafafa] text-gray-900 dark:bg-brand-dark dark:text-gray-100 antialiased selection:bg-brand-primary selection:text-white overflow-x-hidden">
+
+    <audio id="intro-audio" preload="auto">
+        <source src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" type="audio/mpeg">
+    </audio>
 
     <main class="w-full overflow-x-hidden relative flex flex-col">
 
@@ -667,7 +671,7 @@
                         <i class="far fa-envelope flex-shrink-0"></i> yennamsiddartharushi7@gmail.com
                     </a>
                 </div>
-                <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-white text-gray-900 font-bold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all uppercase text-xs tracking-widest text-center">
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-white text-gray-900 font-bold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all uppercase text-xs tracking-widest text-center whitespace-nowrap">
                     SUPPORT PORTAL
                 </a>
             </div>
@@ -758,7 +762,9 @@
             </div>
         </footer>
 
-    </main> <div id="asset-modal" class="fixed inset-0 z-[100] bg-white/95 dark:bg-brand-dark/95 backdrop-blur-xl hidden w-full h-full overflow-y-auto transition-opacity">
+    </main>
+
+    <div id="asset-modal" class="fixed inset-0 z-[100] bg-white/95 dark:bg-brand-dark/95 backdrop-blur-xl hidden w-full h-full overflow-y-auto transition-opacity">
         <div class="max-w-screen-xl mx-auto px-4 lg:px-8 py-6 md:py-10 min-h-screen flex flex-col w-full">
             
             <button id="close-modal" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white flex items-center gap-2 text-[10px] md:text-xs font-semibold uppercase tracking-widest mb-6 md:mb-12 w-fit transition-colors">
@@ -826,7 +832,7 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // --- 🎥 ELITE INTRO LOADER LOGIC 2.0 ---
+        // --- 🎥 ELITE INTRO LOADER LOGIC 2.0 & AUDIO LOGIC ---
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
         }
@@ -836,6 +842,18 @@
             const loader = document.getElementById('intro-overlay');
             const percentText = document.getElementById('loading-percent');
             const loadingLine = document.getElementById('loading-line');
+            const introAudio = document.getElementById('intro-audio');
+            
+            // Try to play audio (will fail silently if browser blocks autoplay without interaction)
+            if (introAudio) {
+                introAudio.volume = 0.4;
+                let playPromise = introAudio.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.log("Audio autoplay blocked by browser policy. Interaction needed first.");
+                    });
+                }
+            }
             
             // Lock scrolling while loading
             document.body.classList.add('overflow-hidden');
