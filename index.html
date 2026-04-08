@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-    <title>Visionary Syntax. | Premium Assets</title>
+    <title>Visionary Syntax. | Premium Assets & Best AI Prompts</title>
+    <meta name="description" content="Discover the best AI prompts and Instagram AI prompts to elevate your digital workflow. Download high-fidelity creative blueprints.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -54,7 +58,9 @@
         }
 
         html, body { 
-            overflow-x: hidden;
+            overflow-x: hidden !important;
+            overflow-x: clip !important; 
+            max-width: 100% !important;
             width: 100%; 
             margin: 0;
             padding: 0;
@@ -232,18 +238,18 @@
         }
     </style>
 </head>
-<body class="bg-[#fafafa] text-gray-900 dark:bg-brand-dark dark:text-gray-100 antialiased selection:bg-brand-primary selection:text-white overflow-x-hidden">
+<body style="overflow-x: hidden !important; max-width: 100vw !important; position: relative;" class="bg-[#fafafa] text-gray-900 dark:bg-brand-dark dark:text-gray-100 antialiased selection:bg-brand-primary selection:text-white">
 
     <audio id="intro-audio" preload="auto">
         <source src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" type="audio/mpeg">
     </audio>
 
-    <main class="w-full overflow-x-hidden relative flex flex-col">
+    <main style="overflow-x: hidden !important; overflow-x: clip !important; max-width: 100vw !important; width: 100%;" class="relative flex flex-col">
 
         <div id="intro-overlay">
             <div class="intro-text-wrap">
                 <h1 class="intro-text">
-                    <span>Visionary  </span> <span class="text-brand-primary">Syntax.</span>
+                    <span>Visionary</span> <span class="text-brand-primary">Syntax.</span>
                 </h1>
                 <div id="loading-line" class="intro-loading-bar w-full max-w-[80%] md:max-w-md"></div>
                 <div class="intro-subtitle font-bold text-center px-4">
@@ -258,18 +264,16 @@
                     
                     <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
                         <span class="font-heading font-black text-lg md:text-xl tracking-tight text-gray-900 dark:text-white uppercase truncate">
-                            Visionary<span class="text-brand-primary">Syntax.</span>
+                            Visionary<span class="text-brand-primary">.</span>
                         </span>
                     </div>
                     
                     <div class="hidden xl:flex space-x-6">
                         <a href="#" class="text-[13px] font-semibold text-gray-600 hover:text-brand-primary dark:text-gray-300 dark:hover:text-white transition-colors">Home</a>
                         <a href="#archive" class="text-[13px] font-semibold text-gray-600 hover:text-brand-primary dark:text-gray-300 dark:hover:text-white transition-colors">Prompts</a>
+                        <a href="#blog" class="text-[13px] font-semibold text-gray-600 hover:text-brand-primary dark:text-gray-300 dark:hover:text-white transition-colors">Blog</a>
                         <a href="#" class="text-[13px] font-semibold text-brand-primary transition-colors">Website Development</a>
-                        <a href="#" class="text-[13px] font-semibold text-brand-primary transition-colors">Offers & Deals</a>
                         <a href="#" class="text-[13px] font-semibold text-gray-600 hover:text-brand-primary dark:text-gray-300 dark:hover:text-white transition-colors">How to Use</a>
-                        <a href="#" class="text-[13px] font-semibold text-gray-600 hover:text-brand-primary dark:text-gray-300 dark:hover:text-white transition-colors flex items-center gap-1">Guides <i class="fas fa-chevron-down text-[10px]"></i></a>
-                        <a href="#" class="text-[13px] font-semibold text-gray-600 hover:text-brand-primary dark:text-gray-300 dark:hover:text-white transition-colors">About</a>
                         <a href="#contact" class="text-[13px] font-semibold text-gray-600 hover:text-brand-primary dark:text-gray-300 dark:hover:text-white transition-colors">Contact</a>
                     </div>
 
@@ -291,18 +295,19 @@
                     </div>
                 </div>
                 
-                <div id="mobile-menu" class="hidden flex-col gap-4 py-4 bg-transparent xl:hidden border-t border-gray-200 dark:border-brand-border">
+                <div id="mobile-menu" class="hidden flex-col gap-4 py-4 bg-white dark:bg-brand-dark xl:hidden border-t border-gray-200 dark:border-brand-border px-4">
                     <a href="#" class="text-[13px] font-semibold text-gray-600 hover:text-brand-primary dark:text-gray-300 dark:hover:text-white transition-colors">Home</a>
                     <a href="#archive" class="text-[13px] font-semibold text-gray-600 hover:text-brand-primary dark:text-gray-300 dark:hover:text-white transition-colors">Prompts</a>
+                    <a href="#blog" class="text-[13px] font-semibold text-gray-600 hover:text-brand-primary dark:text-gray-300 dark:hover:text-white transition-colors">Blog</a>
                     <a href="#" class="text-[13px] font-semibold text-brand-primary transition-colors">Website Development</a>
                     <a href="#contact" class="text-[13px] font-semibold text-gray-600 hover:text-brand-primary dark:text-gray-300 dark:hover:text-white transition-colors">Contact</a>
                 </div>
             </div>
         </nav>
 
-        <section class="relative pt-24 pb-12 lg:pt-48 lg:pb-32 px-4 lg:px-0">
+        <section class="relative pt-24 pb-12 lg:pt-48 lg:pb-32 px-4 lg:px-0 w-full overflow-hidden">
             <div class="max-w-screen-xl mx-auto relative">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full">
                     <div class="w-full flex flex-col items-center text-center lg:items-start lg:text-left" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1700">
                         <div class="inline-flex items-center justify-center gap-2 px-3 py-1.5 mb-6 rounded bg-gray-100 dark:bg-brand-surface border border-gray-200 dark:border-brand-border text-brand-primary text-[9px] md:text-[10px] font-bold tracking-widest uppercase shadow-sm">
                             AI PROMPT ARCHIVE
@@ -347,9 +352,9 @@
             </div>
         </section>
 
-        <section id="archive" class="py-16 md:py-24 bg-white dark:bg-brand-surface relative border-y border-gray-200 dark:border-brand-border px-4 lg:px-0">
+        <section id="archive" class="py-16 md:py-24 bg-white dark:bg-brand-surface relative border-y border-gray-200 dark:border-brand-border px-4 lg:px-0 w-full overflow-hidden">
             
-            <div class="max-w-screen-xl mx-auto mb-8 md:mb-12" data-aos="fade-up">
+            <div class="max-w-screen-xl mx-auto mb-8 md:mb-12 w-full" data-aos="fade-up">
                 <div class="text-center mb-8 md:mb-12">
                     <h2 class="font-heading text-3xl md:text-4xl font-extrabold mb-3 md:mb-4 text-gray-900 dark:text-white tracking-tight uppercase break-words">FEATURED ASSETS</h2>
                     <p class="text-gray-500 dark:text-gray-400 text-xs md:text-sm font-light">A preview of high-fidelity blueprints available in our technical archive.</p>
@@ -357,107 +362,106 @@
                 
                 <div class="flex flex-col lg:flex-row justify-between items-center gap-3 md:gap-4 bg-gray-50 dark:bg-brand-dark backdrop-blur-xl p-2 md:p-3 rounded-xl md:rounded-2xl border border-gray-200 dark:border-brand-border shadow-xl sticky top-16 md:top-24 z-40 w-full">
                     <div class="flex flex-row gap-2 w-full lg:w-auto overflow-x-auto pb-1 hide-scroll snap-x">
-                        <button class="px-4 md:px-5 py-2 md:py-2.5 bg-brand-primary text-white rounded-lg md:rounded-xl text-[10px] md:text-xs font-bold tracking-wider shadow-glow flex-shrink-0 snap-start">ALL</button>
-                        <button class="px-4 md:px-5 py-2 md:py-2.5 bg-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-brand-surface rounded-lg md:rounded-xl text-[10px] md:text-xs font-bold tracking-wider transition-colors flex-shrink-0 snap-start border border-transparent">UNIQUE</button>
-                        <button class="px-4 md:px-5 py-2 md:py-2.5 bg-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-brand-surface rounded-lg md:rounded-xl text-[10px] md:text-xs font-bold tracking-wider transition-colors flex-shrink-0 snap-start border border-transparent">MEN</button>
-                        <button class="px-4 md:px-5 py-2 md:py-2.5 bg-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-brand-surface rounded-lg md:rounded-xl text-[10px] md:text-xs font-bold tracking-wider transition-colors flex-shrink-0 snap-start border border-transparent">WOMEN</button>
-                        <button class="px-4 md:px-5 py-2 md:py-2.5 bg-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-brand-surface rounded-lg md:rounded-xl text-[10px] md:text-xs font-bold tracking-wider transition-colors flex-shrink-0 snap-start border border-transparent">COUPLE</button>
+                        <button class="px-4 py-2 md:py-2.5 bg-brand-primary text-white rounded-lg text-[10px] md:text-xs font-bold tracking-wider shadow-glow flex-shrink-0 snap-start">ALL</button>
+                        <button class="px-4 py-2 md:py-2.5 bg-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-brand-surface rounded-lg text-[10px] md:text-xs font-bold tracking-wider transition-colors flex-shrink-0 snap-start border border-transparent">UNIQUE</button>
+                        <button class="px-4 py-2 md:py-2.5 bg-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-brand-surface rounded-lg text-[10px] md:text-xs font-bold tracking-wider transition-colors flex-shrink-0 snap-start border border-transparent">MEN</button>
+                        <button class="px-4 py-2 md:py-2.5 bg-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-brand-surface rounded-lg text-[10px] md:text-xs font-bold tracking-wider transition-colors flex-shrink-0 snap-start border border-transparent">WOMEN</button>
                     </div>
                     
                     <div class="w-full lg:w-72 relative flex-shrink-0 mt-1 md:mt-0">
-                        <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-xs md:text-sm"></i>
-                        <input type="text" placeholder="Filter aesthetic..." class="w-full bg-white dark:bg-brand-card border border-gray-200 dark:border-brand-border rounded-lg md:rounded-xl py-2.5 md:py-3 pl-10 md:pl-11 pr-4 text-xs md:text-sm text-gray-900 dark:text-white focus:outline-none focus:border-brand-primary transition-shadow">
+                        <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-xs md:text-sm"></i>
+                        <input type="text" placeholder="Filter aesthetic..." class="w-full bg-white dark:bg-brand-card border border-gray-200 dark:border-brand-border rounded-lg py-2.5 pl-9 pr-3 text-xs md:text-sm text-gray-900 dark:text-white focus:outline-none focus:border-brand-primary transition-shadow">
                     </div>
                 </div>
             </div>
 
-            <div class="max-w-screen-xl mx-auto px-4 lg:px-8">
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            <div class="max-w-screen-xl mx-auto w-full">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
                     
-                    <div class="bg-gray-50 dark:bg-brand-card border border-gray-200 dark:border-brand-border rounded-2xl md:rounded-3xl overflow-hidden flex flex-col group hover:-translate-y-1 md:hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-                        <div class="relative aspect-[3/4] overflow-hidden bg-gray-200 dark:bg-black rounded-t-2xl md:rounded-t-3xl">
-                            <div class="absolute top-2 md:top-4 left-2 md:left-4 z-10 flex gap-1.5 md:gap-2">
-                                <span class="px-2 md:px-3 py-0.5 md:py-1 bg-white/90 dark:bg-black/80 backdrop-blur-md text-gray-900 dark:text-white text-[8px] md:text-[10px] font-bold uppercase rounded-full">MEN</span>
+                    <div class="bg-gray-50 dark:bg-brand-card border border-gray-200 dark:border-brand-border rounded-xl md:rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-1 transition-all duration-300 w-full" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative aspect-[3/4] overflow-hidden bg-gray-200 dark:bg-black w-full">
+                            <div class="absolute top-2 left-2 md:top-4 md:left-4 z-10 flex gap-1.5">
+                                <span class="px-2 py-0.5 bg-white/90 dark:bg-black/80 backdrop-blur-md text-gray-900 dark:text-white text-[8px] md:text-[10px] font-bold uppercase rounded-full">MEN</span>
                             </div>
                             <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop" alt="Portrait" class="w-full h-full object-cover opacity-90">
                         </div>
-                        <div class="p-4 md:p-6 flex flex-col flex-grow">
-                            <h4 class="text-gray-900 dark:text-white font-bold text-base md:text-lg mb-1 md:mb-2 truncate">Office Swag</h4>
-                            <p class="text-gray-500 dark:text-gray-400 text-[11px] md:text-sm mb-3 md:mb-6 line-clamp-2 font-light break-words">A high-fidelity candid flash photography blueprint.</p>
-                            <button class="open-modal-btn flex items-center justify-between w-full mt-auto text-[10px] md:text-xs font-bold text-gray-900 dark:text-white hover:text-brand-primary dark:hover:text-brand-primary transition-colors group/btn" 
+                        <div class="p-3 md:p-5 flex flex-col flex-grow w-full">
+                            <h4 class="text-gray-900 dark:text-white font-bold text-xs md:text-base mb-1 truncate w-full">Office Swag</h4>
+                            <p class="text-gray-500 dark:text-gray-400 text-[9px] md:text-xs mb-3 line-clamp-2 font-light w-full">A high-fidelity candid flash photography blueprint.</p>
+                            <button class="open-modal-btn flex items-center justify-between w-full mt-auto text-[9px] md:text-xs font-bold text-gray-900 dark:text-white hover:text-brand-primary dark:hover:text-brand-primary transition-colors group/btn" 
                                 data-title="Office Swag Portrait"
                                 data-category="MEN"
                                 data-desc="A high-fidelity candid flash photography blueprint for professional office-style setups."
                                 data-img="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop"
                                 data-prompt="A high-fidelity candid flash photography shot of a young professional man in stylish streetwear sitting at an office desk, looking confident. 8k, photorealistic, cinematic lighting.">
                                 <span class="tracking-widest uppercase truncate">ACCESS</span>
-                                <i class="fas fa-arrow-right ml-1 md:ml-2 text-brand-primary text-[10px] md:text-xs flex-shrink-0"></i>
+                                <i class="fas fa-arrow-right ml-1 text-brand-primary text-[8px] md:text-[10px] flex-shrink-0"></i>
                             </button>
                         </div>
                     </div>
 
-                    <div class="bg-gray-50 dark:bg-brand-card border border-gray-200 dark:border-brand-border rounded-2xl md:rounded-3xl overflow-hidden flex flex-col group hover:-translate-y-1 md:hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-                        <div class="relative aspect-[3/4] overflow-hidden bg-gray-200 dark:bg-black rounded-t-2xl md:rounded-t-3xl">
-                            <div class="absolute top-2 md:top-4 left-2 md:left-4 z-10 flex gap-1.5 md:gap-2">
-                                <span class="px-2 md:px-3 py-0.5 md:py-1 bg-white/90 dark:bg-black/80 backdrop-blur-md text-gray-900 dark:text-white text-[8px] md:text-[10px] font-bold uppercase rounded-full">MEN</span>
+                    <div class="bg-gray-50 dark:bg-brand-card border border-gray-200 dark:border-brand-border rounded-xl md:rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-1 transition-all duration-300 w-full" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative aspect-[3/4] overflow-hidden bg-gray-200 dark:bg-black w-full">
+                            <div class="absolute top-2 left-2 md:top-4 md:left-4 z-10 flex gap-1.5">
+                                <span class="px-2 py-0.5 bg-white/90 dark:bg-black/80 backdrop-blur-md text-gray-900 dark:text-white text-[8px] md:text-[10px] font-bold uppercase rounded-full">MEN</span>
                             </div>
                             <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=600&auto=format&fit=crop" alt="Guitar" class="w-full h-full object-cover opacity-90">
                         </div>
-                        <div class="p-4 md:p-6 flex flex-col flex-grow">
-                            <h4 class="text-gray-900 dark:text-white font-bold text-base md:text-lg mb-1 md:mb-2 truncate">Night Guitarist</h4>
-                            <p class="text-gray-500 dark:text-gray-400 text-[11px] md:text-sm mb-3 md:mb-6 line-clamp-2 font-light break-words">A candid, ultra-realistic night shot of a young man playing...</p>
-                            <button class="open-modal-btn flex items-center justify-between w-full mt-auto text-[10px] md:text-xs font-bold text-gray-900 dark:text-white hover:text-brand-primary dark:hover:text-brand-primary transition-colors group/btn" 
+                        <div class="p-3 md:p-5 flex flex-col flex-grow w-full">
+                            <h4 class="text-gray-900 dark:text-white font-bold text-xs md:text-base mb-1 truncate w-full">Night Guitarist</h4>
+                            <p class="text-gray-500 dark:text-gray-400 text-[9px] md:text-xs mb-3 line-clamp-2 font-light w-full">A candid, ultra-realistic night shot of a young man.</p>
+                            <button class="open-modal-btn flex items-center justify-between w-full mt-auto text-[9px] md:text-xs font-bold text-gray-900 dark:text-white hover:text-brand-primary dark:hover:text-brand-primary transition-colors group/btn" 
                                 data-title="Night Guitarist"
                                 data-category="MEN"
                                 data-desc="A candid, ultra-realistic night shot of a young man playing an acoustic guitar while leaning against a sports car."
                                 data-img="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1200&auto=format&fit=crop"
                                 data-prompt="A candid, ultra-realistic night shot of a young man with a yellow shirt leaning against a grey sports car playing an acoustic guitar under streetlights. High contrast, neon accents.">
                                 <span class="tracking-widest uppercase truncate">ACCESS</span>
-                                <i class="fas fa-arrow-right ml-1 md:ml-2 text-brand-primary text-[10px] md:text-xs flex-shrink-0"></i>
+                                <i class="fas fa-arrow-right ml-1 text-brand-primary text-[8px] md:text-[10px] flex-shrink-0"></i>
                             </button>
                         </div>
                     </div>
 
-                    <div class="bg-gray-50 dark:bg-brand-card border border-gray-200 dark:border-brand-border rounded-2xl md:rounded-3xl overflow-hidden flex flex-col group hover:-translate-y-1 md:hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
-                        <div class="relative aspect-[3/4] overflow-hidden bg-gray-200 dark:bg-black rounded-t-2xl md:rounded-t-3xl">
-                            <div class="absolute top-2 md:top-4 left-2 md:left-4 z-10 flex gap-1.5 md:gap-2">
-                                <span class="px-2 md:px-3 py-0.5 md:py-1 bg-white/90 dark:bg-black/80 backdrop-blur-md text-gray-900 dark:text-white text-[8px] md:text-[10px] font-bold uppercase rounded-full">UNIQUE</span>
+                    <div class="bg-gray-50 dark:bg-brand-card border border-gray-200 dark:border-brand-border rounded-xl md:rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-1 transition-all duration-300 w-full" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative aspect-[3/4] overflow-hidden bg-gray-200 dark:bg-black w-full">
+                            <div class="absolute top-2 left-2 md:top-4 md:left-4 z-10 flex gap-1.5">
+                                <span class="px-2 py-0.5 bg-white/90 dark:bg-black/80 backdrop-blur-md text-gray-900 dark:text-white text-[8px] md:text-[10px] font-bold uppercase rounded-full">UNIQUE</span>
                             </div>
                             <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop" alt="Dark" class="w-full h-full object-cover opacity-90">
                         </div>
-                        <div class="p-4 md:p-6 flex flex-col flex-grow">
-                            <h4 class="text-gray-900 dark:text-white font-bold text-base md:text-lg mb-1 md:mb-2 truncate">Dark Rider</h4>
-                            <p class="text-gray-500 dark:text-gray-400 text-[11px] md:text-sm mb-3 md:mb-6 line-clamp-2 font-light break-words">An ultra-realistic cinematic dark poster portrait.</p>
-                            <button class="open-modal-btn flex items-center justify-between w-full mt-auto text-[10px] md:text-xs font-bold text-gray-900 dark:text-white hover:text-brand-primary dark:hover:text-brand-primary transition-colors group/btn" 
+                        <div class="p-3 md:p-5 flex flex-col flex-grow w-full">
+                            <h4 class="text-gray-900 dark:text-white font-bold text-xs md:text-base mb-1 truncate w-full">Dark Rider</h4>
+                            <p class="text-gray-500 dark:text-gray-400 text-[9px] md:text-xs mb-3 line-clamp-2 font-light w-full">An ultra-realistic cinematic dark poster portrait.</p>
+                            <button class="open-modal-btn flex items-center justify-between w-full mt-auto text-[9px] md:text-xs font-bold text-gray-900 dark:text-white hover:text-brand-primary dark:hover:text-brand-primary transition-colors group/btn" 
                                 data-title="Cinematic Dark Rider"
                                 data-category="UNIQUE"
                                 data-desc="An ultra-realistic cinematic dark poster portrait with deep shadows and rim lighting."
                                 data-img="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1200&auto=format&fit=crop"
                                 data-prompt="An ultra-realistic cinematic dark poster portrait of a person in shadows, strong rim lighting, moody atmosphere, 35mm lens, dramatic mood.">
                                 <span class="tracking-widest uppercase truncate">ACCESS</span>
-                                <i class="fas fa-arrow-right ml-1 md:ml-2 text-brand-primary text-[10px] md:text-xs flex-shrink-0"></i>
+                                <i class="fas fa-arrow-right ml-1 text-brand-primary text-[8px] md:text-[10px] flex-shrink-0"></i>
                             </button>
                         </div>
                     </div>
 
-                    <div class="bg-gray-50 dark:bg-brand-card border border-gray-200 dark:border-brand-border rounded-2xl md:rounded-3xl overflow-hidden flex flex-col group hover:-translate-y-1 md:hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
-                        <div class="relative aspect-[3/4] overflow-hidden bg-gray-200 dark:bg-black rounded-t-2xl md:rounded-t-3xl">
-                            <div class="absolute top-2 md:top-4 left-2 md:left-4 z-10 flex gap-1.5 md:gap-2">
-                                <span class="px-2 md:px-3 py-0.5 md:py-1 bg-white/90 dark:bg-black/80 backdrop-blur-md text-gray-900 dark:text-white text-[8px] md:text-[10px] font-bold uppercase rounded-full">UNIQUE</span>
+                    <div class="bg-gray-50 dark:bg-brand-card border border-gray-200 dark:border-brand-border rounded-xl md:rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-1 transition-all duration-300 w-full" data-aos="fade-up" data-aos-delay="400">
+                        <div class="relative aspect-[3/4] overflow-hidden bg-gray-200 dark:bg-black w-full">
+                            <div class="absolute top-2 left-2 md:top-4 md:left-4 z-10 flex gap-1.5">
+                                <span class="px-2 py-0.5 bg-white/90 dark:bg-black/80 backdrop-blur-md text-gray-900 dark:text-white text-[8px] md:text-[10px] font-bold uppercase rounded-full">UNIQUE</span>
                             </div>
                             <img src="https://images.unsplash.com/photo-1600804889194-e6fbf08ddb39?q=80&w=600&auto=format&fit=crop" alt="Gold" class="w-full h-full object-cover opacity-90">
                         </div>
-                        <div class="p-4 md:p-6 flex flex-col flex-grow">
-                            <h4 class="text-gray-900 dark:text-white font-bold text-base md:text-lg mb-1 md:mb-2 truncate">Golden Warrior</h4>
-                            <p class="text-gray-500 dark:text-gray-400 text-[11px] md:text-sm mb-3 md:mb-6 line-clamp-2 font-light break-words">A realistic 3D golden sculpture render of a fierce warrior.</p>
-                            <button class="open-modal-btn flex items-center justify-between w-full mt-auto text-[10px] md:text-xs font-bold text-gray-900 dark:text-white hover:text-brand-primary dark:hover:text-brand-primary transition-colors group/btn" 
+                        <div class="p-3 md:p-5 flex flex-col flex-grow w-full">
+                            <h4 class="text-gray-900 dark:text-white font-bold text-xs md:text-base mb-1 truncate w-full">Golden Warrior</h4>
+                            <p class="text-gray-500 dark:text-gray-400 text-[9px] md:text-xs mb-3 line-clamp-2 font-light w-full">A 3D golden sculpture render of a fierce warrior.</p>
+                            <button class="open-modal-btn flex items-center justify-between w-full mt-auto text-[9px] md:text-xs font-bold text-gray-900 dark:text-white hover:text-brand-primary dark:hover:text-brand-primary transition-colors group/btn" 
                                 data-title="Golden Warrior"
                                 data-category="UNIQUE"
                                 data-desc="A realistic 3D golden sculpture render of a fierce warrior breaking chains."
                                 data-img="https://images.unsplash.com/photo-1600804889194-e6fbf08ddb39?q=80&w=1200&auto=format&fit=crop"
                                 data-prompt="A realistic 3D solid gold sculpture of a warrior breaking metal chains, standing in an ancient desert ruins, hyper-detailed textures, octane render.">
                                 <span class="tracking-widest uppercase truncate">ACCESS</span>
-                                <i class="fas fa-arrow-right ml-1 md:ml-2 text-brand-primary text-[10px] md:text-xs flex-shrink-0"></i>
+                                <i class="fas fa-arrow-right ml-1 text-brand-primary text-[8px] md:text-[10px] flex-shrink-0"></i>
                             </button>
                         </div>
                     </div>
@@ -466,10 +470,10 @@
             </div>
         </section>
 
-        <section class="py-16 md:py-24 relative bg-gray-100 dark:bg-brand-dark px-4 lg:px-0">
-            <div class="max-w-screen-xl mx-auto">
+        <section class="py-16 md:py-24 relative bg-gray-100 dark:bg-brand-dark px-4 lg:px-0 w-full overflow-hidden">
+            <div class="max-w-screen-xl mx-auto w-full">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center w-full">
-                    <div data-aos="fade-up" data-aos-duration="1000" class="text-center md:text-left">
+                    <div data-aos="fade-up" data-aos-duration="1000" class="text-center md:text-left w-full">
                         <h2 class="font-heading text-3xl sm:text-5xl md:text-6xl font-black tracking-tighter mb-4 md:mb-6 text-gray-900 dark:text-white uppercase leading-[1.1] break-words">
                             EMPOWERING YOUR <br class="hidden sm:block">
                             <span class="text-brand-primary">CREATIVE WORKFLOW</span>
@@ -484,31 +488,24 @@
                         
                         <ul class="space-y-5 md:space-y-8 w-full">
                             <li class="flex items-start gap-3 md:gap-4 w-full">
-                                <i class="far fa-check-circle text-brand-primary text-lg md:text-xl mt-0.5 md:mt-1 flex-shrink-0"></i>
+                                <i class="far fa-check-circle text-brand-primary text-lg md:text-xl mt-0.5 flex-shrink-0"></i>
                                 <div class="w-full">
-                                    <h4 class="font-bold text-sm md:text-base mb-0.5 md:mb-1 text-gray-900 dark:text-white leading-tight break-words">Instagram Reels & Posts</h4>
+                                    <h4 class="font-bold text-sm md:text-base mb-0.5 text-gray-900 dark:text-white leading-tight break-words">Instagram Reels & Posts</h4>
                                     <p class="text-[11px] md:text-xs text-gray-500 dark:text-gray-400 font-light break-words">Engineered 9:16 vertical blueprints for viral impact.</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3 md:gap-4 w-full">
-                                <i class="far fa-check-circle text-brand-primary text-lg md:text-xl mt-0.5 md:mt-1 flex-shrink-0"></i>
+                                <i class="far fa-check-circle text-brand-primary text-lg md:text-xl mt-0.5 flex-shrink-0"></i>
                                 <div class="w-full">
-                                    <h4 class="font-bold text-sm md:text-base mb-0.5 md:mb-1 text-gray-900 dark:text-white leading-tight break-words">Profile Branding</h4>
+                                    <h4 class="font-bold text-sm md:text-base mb-0.5 text-gray-900 dark:text-white leading-tight break-words">Profile Branding</h4>
                                     <p class="text-[11px] md:text-xs text-gray-500 dark:text-gray-400 font-light break-words">Create high-fidelity personal avatars and headshots.</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3 md:gap-4 w-full">
-                                <i class="far fa-check-circle text-brand-primary text-lg md:text-xl mt-0.5 md:mt-1 flex-shrink-0"></i>
+                                <i class="far fa-check-circle text-brand-primary text-lg md:text-xl mt-0.5 flex-shrink-0"></i>
                                 <div class="w-full">
-                                    <h4 class="font-bold text-sm md:text-base mb-0.5 md:mb-1 text-gray-900 dark:text-white leading-tight break-words">YouTube Thumbnails</h4>
+                                    <h4 class="font-bold text-sm md:text-base mb-0.5 text-gray-900 dark:text-white leading-tight break-words">YouTube Thumbnails</h4>
                                     <p class="text-[11px] md:text-xs text-gray-500 dark:text-gray-400 font-light break-words">High-contrast visuals designed for click-through rate.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3 md:gap-4 w-full">
-                                <i class="far fa-check-circle text-brand-primary text-lg md:text-xl mt-0.5 md:mt-1 flex-shrink-0"></i>
-                                <div class="w-full">
-                                    <h4 class="font-bold text-sm md:text-base mb-0.5 md:mb-1 text-gray-900 dark:text-white leading-tight break-words">Cinematic Storytelling</h4>
-                                    <p class="text-[11px] md:text-xs text-gray-500 dark:text-gray-400 font-light break-words">Mood-setting stills for digital documentaries.</p>
                                 </div>
                             </li>
                         </ul>
@@ -517,62 +514,52 @@
             </div>
         </section>
 
-        <section class="pb-16 md:pb-24 bg-gray-100 dark:bg-brand-dark px-4 lg:px-0" data-aos="fade-up" data-aos-duration="1000">
-            <div class="max-w-screen-xl mx-auto">
-                <div class="bg-gray-900 dark:bg-brand-surface rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl border border-gray-800 dark:border-brand-border w-full">
-                    
-                    <div class="p-6 sm:p-10 lg:p-16 lg:w-[65%] flex flex-col items-center md:items-start text-center md:text-left w-full">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 mb-4 md:mb-6 rounded-full border border-brand-primary/30 text-brand-primary text-[9px] md:text-[10px] font-bold tracking-widest uppercase break-words">
-                            <i class="fas fa-globe flex-shrink-0"></i> PREMIUM WEBSITE
-                        </div>
-                        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-3 md:mb-4 break-words w-full">
-                            EDUNOVA<span class="text-brand-primary font-light italic">STUDY HUB</span>
-                        </h2>
-                        <p class="text-gray-400 text-xs md:text-sm max-w-xl mb-8 md:mb-12 font-light leading-relaxed break-words w-full">
-                            Your ultimate learning hub for pomodoro focus, interactive MCQs, and detailed progress tracking. <strong class="text-white font-semibold">digital experiences</strong> that convert visitors into loyal customers.
+        <section id="blog" class="py-16 md:py-24 bg-white dark:bg-brand-surface relative border-t border-gray-200 dark:border-brand-border px-4 lg:px-0 w-full overflow-hidden">
+            <div class="max-w-screen-xl mx-auto w-full" data-aos="fade-up">
+                <div class="text-center mb-10 md:mb-16">
+                    <h2 class="font-heading text-3xl md:text-4xl font-extrabold mb-3 md:mb-4 text-gray-900 dark:text-white tracking-tight uppercase break-words">Creator Articles</h2>
+                    <p class="text-gray-500 dark:text-gray-400 text-xs md:text-sm font-light px-4">Insights, strategies, and the best AI prompts for your workflow.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+                    <div class="bg-gray-50 dark:bg-brand-card rounded-2xl p-6 md:p-8 border border-gray-200 dark:border-brand-border flex flex-col w-full hover:-translate-y-1 transition-transform duration-300 shadow-sm">
+                        <span class="text-[10px] font-bold text-brand-primary tracking-widest uppercase mb-3">Strategy</span>
+                        <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-3 leading-tight">The Best AI Prompts for Modern Branding</h3>
+                        <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400 font-light mb-6 flex-grow leading-relaxed">
+                            Discover how to structure your descriptions to generate high-fidelity commercial assets that outshine your competition.
                         </p>
-                        
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 sm:gap-y-5 gap-x-4 sm:gap-x-8 mb-8 md:mb-12 w-full text-left">
-                            <div class="flex items-center gap-3 text-gray-300 text-xs md:text-sm font-light w-full">
-                                <i class="far fa-check-circle text-brand-primary flex-shrink-0"></i> Smart Notes
-                            </div>
-                            <div class="flex items-center gap-3 text-gray-300 text-xs md:text-sm font-light w-full">
-                                <i class="far fa-check-circle text-brand-primary flex-shrink-0"></i> Previous Papers
-                            </div>
-                            <div class="flex items-center gap-3 text-gray-300 text-xs md:text-sm font-light w-full">
-                                <i class="far fa-check-circle text-brand-primary flex-shrink-0"></i> Syllabus & Blueprints
-                            </div>
-                            <div class="flex items-center gap-3 text-gray-300 text-xs md:text-sm font-light w-full">
-                                <i class="far fa-check-circle text-brand-primary flex-shrink-0"></i> Official Textbooks
-                            </div>
-                            <div class="flex items-center gap-3 text-gray-300 text-xs md:text-sm font-light w-full">
-                                <i class="far fa-check-circle text-brand-primary flex-shrink-0"></i> MCQ Mock Tests
-                            </div>
-                            <div class="flex items-center gap-3 text-gray-300 text-xs md:text-sm font-light w-full">
-                                <i class="far fa-check-circle text-brand-primary flex-shrink-0"></i> My Report Card
-                            </div>
-                        </div>
-
-                        <a href="https://yennamsidartharushi.github.io/Smartstudy/" class="w-full sm:w-auto inline-flex justify-center items-center px-6 md:px-8 py-3 md:py-3.5 text-xs md:text-sm font-bold text-gray-900 bg-white rounded-xl hover:bg-gray-200 transition-colors group">
-                            Start Your Project <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        <a href="#" class="text-[11px] md:text-xs font-bold text-gray-900 dark:text-white hover:text-brand-primary dark:hover:text-brand-primary transition-colors flex items-center uppercase tracking-widest">
+                            Read Article <i class="fas fa-arrow-right ml-2 text-brand-primary"></i>
                         </a>
                     </div>
 
-                    <div class="bg-black dark:bg-brand-card border-t lg:border-t-0 lg:border-l border-gray-800 dark:border-brand-border lg:w-[35%] p-8 md:p-10 flex flex-col items-center justify-center relative overflow-hidden w-full">
-                        <div class="relative z-10 text-center w-full">
-                            <div class="w-16 h-16 md:w-24 md:h-24 mx-auto bg-brand-primary rounded-[1rem] md:rounded-[1.5rem] flex items-center justify-center mb-4 md:mb-6 transform rotate-3 shadow-glow">
-                                <i class="fas fa-magic text-2xl md:text-4xl text-white"></i>
-                            </div>
-                            <h3 class="font-heading text-4xl md:text-5xl font-black text-white mb-1 md:mb-2 tracking-tight break-words">100+</h3>
-                            <p class="text-[9px] md:text-[10px] tracking-widest uppercase text-brand-primary font-bold break-words">PROJECTS DELIVERED</p>
-                        </div>
+                    <div class="bg-gray-50 dark:bg-brand-card rounded-2xl p-6 md:p-8 border border-gray-200 dark:border-brand-border flex flex-col w-full hover:-translate-y-1 transition-transform duration-300 shadow-sm">
+                        <span class="text-[10px] font-bold text-brand-primary tracking-widest uppercase mb-3">Social Media</span>
+                        <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-3 leading-tight">Crafting Viral Instagram AI Prompts</h3>
+                        <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400 font-light mb-6 flex-grow leading-relaxed">
+                            Learn the exact lens parameters and lighting physics terminology needed to create stunning 9:16 vertical formats for Reels.
+                        </p>
+                        <a href="#" class="text-[11px] md:text-xs font-bold text-gray-900 dark:text-white hover:text-brand-primary dark:hover:text-brand-primary transition-colors flex items-center uppercase tracking-widest">
+                            Read Article <i class="fas fa-arrow-right ml-2 text-brand-primary"></i>
+                        </a>
+                    </div>
+
+                    <div class="bg-gray-50 dark:bg-brand-card rounded-2xl p-6 md:p-8 border border-gray-200 dark:border-brand-border flex flex-col w-full hover:-translate-y-1 transition-transform duration-300 shadow-sm md:col-span-2 lg:col-span-1">
+                        <span class="text-[10px] font-bold text-brand-primary tracking-widest uppercase mb-3">Workflow</span>
+                        <h3 class="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-3 leading-tight">Mastering High-Fidelity AI Execution</h3>
+                        <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400 font-light mb-6 flex-grow leading-relaxed">
+                            A deep dive into bridging the gap between your creative vision and what the machine actually produces.
+                        </p>
+                        <a href="#" class="text-[11px] md:text-xs font-bold text-gray-900 dark:text-white hover:text-brand-primary dark:hover:text-brand-primary transition-colors flex items-center uppercase tracking-widest">
+                            Read Article <i class="fas fa-arrow-right ml-2 text-brand-primary"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="py-16 md:py-20 bg-gray-50 dark:bg-brand-dark relative border-t border-gray-200 dark:border-brand-border px-4 lg:px-0">
-            <div class="max-w-screen-xl mx-auto" data-aos="fade-up">
+        <section id="contact" class="py-16 md:py-20 bg-gray-50 dark:bg-brand-dark relative border-t border-gray-200 dark:border-brand-border px-4 lg:px-0 w-full overflow-hidden">
+            <div class="max-w-screen-xl mx-auto w-full" data-aos="fade-up">
                 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-start w-full">
                     
@@ -598,16 +585,6 @@
                                     <div class="min-w-0 flex-1">
                                         <p class="text-[8px] md:text-[9px] uppercase tracking-widest font-bold text-gray-500 mb-0.5 md:mb-1">RESPONSE TIME</p>
                                         <p class="text-xs md:text-sm font-medium text-gray-900 dark:text-white truncate break-words">Within 24-48 Hours</p>
-                                    </div>
-                                </div>
-
-                                <div class="flex items-center gap-3 md:gap-4 w-full">
-                                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-gray-100 dark:bg-brand-card border border-gray-200 dark:border-brand-border flex items-center justify-center flex-shrink-0">
-                                        <i class="fas fa-map-marker-alt text-gray-500 dark:text-gray-400 text-sm md:text-base"></i>
-                                    </div>
-                                    <div class="min-w-0 flex-1">
-                                        <p class="text-[8px] md:text-[9px] uppercase tracking-widest font-bold text-gray-500 mb-0.5 md:mb-1">HQ LOCATION</p>
-                                        <p class="text-xs md:text-sm font-medium text-gray-900 dark:text-white truncate break-words">Andhra Pradesh, India</p>
                                     </div>
                                 </div>
                             </div>
@@ -644,11 +621,6 @@
                             </div>
 
                             <div class="flex flex-col gap-1.5 md:gap-2 w-full">
-                                <label class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-gray-500">INQUIRY NATURE</label>
-                                <input type="text" placeholder="Technical Support" class="w-full bg-gray-50 border border-gray-200 dark:bg-brand-card dark:border-transparent rounded-lg md:rounded-xl py-3 md:py-3.5 px-3 md:px-4 text-xs md:text-sm text-gray-900 dark:text-white focus:outline-none focus:border-brand-primary transition-colors">
-                            </div>
-
-                            <div class="flex flex-col gap-1.5 md:gap-2 w-full">
                                 <label class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-gray-500">MESSAGE CONTENT</label>
                                 <textarea rows="4" placeholder="Please describe your creative goals or technical issue in detail..." class="w-full bg-gray-50 border border-gray-200 dark:bg-brand-card dark:border-transparent rounded-lg md:rounded-xl py-3 md:py-3.5 px-3 md:px-4 text-xs md:text-sm text-gray-900 dark:text-white focus:outline-none focus:border-brand-primary transition-colors resize-none"></textarea>
                             </div>
@@ -663,25 +635,11 @@
             </div>
         </section>
 
-        <div class="bg-brand-primary text-white py-14 px-4 lg:px-0" data-aos="fade-up" data-aos-duration="800">
-            <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 w-full">
-                <div class="w-full md:w-auto text-center md:text-left">
-                    <h2 class="font-heading text-3xl md:text-4xl font-extrabold uppercase mb-2 tracking-tight break-words">NEED SUPPORT?</h2>
-                    <a href="mailto:yennamsiddartharushi7@gmail.com" class="flex flex-wrap items-center justify-center md:justify-start gap-2 text-white/90 hover:text-white transition-colors font-light text-sm break-all w-full">
-                        <i class="far fa-envelope flex-shrink-0"></i> yennamsiddartharushi7@gmail.com
-                    </a>
-                </div>
-                <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-white text-gray-900 font-bold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all uppercase text-xs tracking-widest text-center whitespace-nowrap">
-                    SUPPORT PORTAL
-                </a>
-            </div>
-        </div>
-
-        <footer class="bg-white dark:bg-brand-surface pt-12 md:pt-16 pb-8 md:pb-10 border-t border-gray-200 dark:border-brand-border px-4 lg:px-0 w-full">
+        <footer class="bg-white dark:bg-brand-surface pt-12 md:pt-16 pb-8 md:pb-10 border-t border-gray-200 dark:border-brand-border px-4 lg:px-0 w-full overflow-hidden">
             <div class="max-w-screen-xl mx-auto w-full">
                 
                 <div class="text-center mb-16 md:mb-24 mt-4 md:mt-8 w-full" data-aos="fade-up">
-                    <p class="text-base md:text-xl font-light italic text-gray-500 dark:text-gray-400 max-w-3xl mx-auto break-words">
+                    <p class="text-base md:text-xl font-light italic text-gray-500 dark:text-gray-400 max-w-3xl mx-auto px-4 break-words">
                         "The future of content isn't just about what you show, it's about how accurately you can engineer the vision in your mind."
                     </p>
                     <div class="mt-4 md:mt-6 flex flex-wrap items-center justify-center gap-2 md:gap-4 text-[8px] md:text-[10px] tracking-[0.15em] md:tracking-[0.2em] uppercase text-gray-600 dark:text-gray-500 font-bold">
@@ -690,21 +648,17 @@
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-12 md:mb-16 text-center sm:text-left w-full" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex flex-col items-center sm:items-start w-full overflow-hidden">
-                        <div class="flex items-center justify-center sm:justify-start gap-2 mb-4 md:mb-6 cursor-pointer w-full">
+                    <div class="flex flex-col items-center sm:items-start w-full">
+                        <div class="flex items-center justify-center sm:justify-start gap-2 mb-4 md:mb-6 w-full">
                             <span class="font-heading font-black text-lg md:text-xl tracking-tight text-gray-900 dark:text-white uppercase truncate break-words">
                                 Visionary <span class="text-brand-primary">Syntax.</span>
                             </span>
                         </div>
-                        <p class="text-xs md:text-[13px] text-gray-500 dark:text-gray-400 mb-4 leading-relaxed font-light break-words w-full">
+                        <p class="text-xs md:text-[13px] text-gray-500 dark:text-gray-400 mb-4 leading-relaxed font-light break-words w-full px-4 sm:px-0">
                             The premium destination for digital creators looking to elevate their professional presence with high-fidelity, engineered AI blueprints.
                         </p>
                         
-                        <div class="inline-flex items-center justify-center gap-2 px-3 py-1.5 rounded-full bg-gray-100 dark:bg-brand-card text-brand-primary text-[9px] md:text-[11px] font-semibold mb-6 border border-gray-200 dark:border-brand-border shadow-sm mx-auto sm:mx-0 w-fit max-w-full">
-                            <i class="fas fa-arrow-circle-down flex-shrink-0"></i> <span class="truncate break-words">Machine Learning & AI</span>
-                        </div>
-
-                        <div class="flex justify-center sm:justify-start gap-4 w-full">
+                        <div class="flex justify-center sm:justify-start gap-4 w-full mt-4">
                             <a href="https://instagram.com/y._siddartha_" target="_blank" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-brand-card flex items-center justify-center text-gray-500 hover:text-brand-primary transition-all flex-shrink-0">
                                 <i class="fab fa-instagram"></i>
                             </a>
@@ -722,8 +676,7 @@
                         <ul class="space-y-3 md:space-y-4 w-full">
                             <li><a href="#" class="text-xs md:text-[13px] text-brand-primary font-medium hover:underline transition-all break-words">Home</a></li>
                             <li><a href="#archive" class="text-xs md:text-[13px] text-gray-500 dark:text-gray-400 font-light hover:text-brand-primary transition-colors break-words">Prompt Archive</a></li>
-                            <li><a href="#" class="text-xs md:text-[13px] text-gray-500 dark:text-gray-400 font-light hover:text-brand-primary transition-colors break-words">Deployment Guide</a></li>
-                            <li><a href="#" class="text-xs md:text-[13px] text-gray-500 dark:text-gray-400 font-light hover:text-brand-primary transition-colors break-words">About the Platform</a></li>
+                            <li><a href="#blog" class="text-xs md:text-[13px] text-gray-500 dark:text-gray-400 font-light hover:text-brand-primary transition-colors break-words">Creator Articles</a></li>
                             <li><a href="#contact" class="text-xs md:text-[13px] text-gray-500 dark:text-gray-400 font-light hover:text-brand-primary transition-colors break-words">Contact Us</a></li>
                         </ul>
                     </div>
@@ -732,7 +685,6 @@
                         <h4 class="font-bold text-sm md:text-base mb-4 md:mb-6 text-gray-900 dark:text-white break-words">Creative Guides</h4>
                         <ul class="space-y-3 md:space-y-4 w-full">
                             <li><a href="#" class="text-xs md:text-[13px] text-brand-primary font-medium hover:underline transition-all break-words">Writing Effective Prompts</a></li>
-                            <li><a href="#" class="text-xs md:text-[13px] text-gray-500 dark:text-gray-400 font-light hover:text-brand-primary transition-colors break-words">Beginner's Handbook</a></li>
                             <li><a href="#" class="text-xs md:text-[13px] text-gray-500 dark:text-gray-400 font-light hover:text-brand-primary transition-colors break-words">Instagram AI Strategies</a></li>
                             <li><a href="#" class="text-xs md:text-[13px] text-gray-500 dark:text-gray-400 font-light hover:text-brand-primary transition-colors break-words">Engineering Basics</a></li>
                             <li><a href="#" class="text-xs md:text-[13px] text-gray-500 dark:text-gray-400 font-light hover:text-brand-primary transition-colors break-words">Image Styles Guide</a></li>
@@ -740,13 +692,11 @@
                     </div>
 
                     <div class="flex flex-col items-center sm:items-start w-full">
-                        <h4 class="font-bold text-sm md:text-base mb-4 md:mb-6 text-gray-900 dark:text-white break-words">Legal & Support</h4>
+                        <h4 class="font-bold text-sm md:text-base mb-4 md:mb-6 text-gray-900 dark:text-white break-words">Legal</h4>
                         <ul class="space-y-3 md:space-y-4 w-full">
-                            <li><a href="#" class="text-xs md:text-[13px] text-brand-primary font-medium hover:underline transition-all break-words">Privacy Policy</a></li>
+                            <li><a href="#" class="text-xs md:text-[13px] text-gray-500 dark:text-gray-400 font-light hover:text-brand-primary transition-colors break-words">Privacy Policy</a></li>
                             <li><a href="#" class="text-xs md:text-[13px] text-gray-500 dark:text-gray-400 font-light hover:text-brand-primary transition-colors break-words">Terms & Conditions</a></li>
                             <li><a href="#" class="text-xs md:text-[13px] text-gray-500 dark:text-gray-400 font-light hover:text-brand-primary transition-colors break-words">Cookie Policy</a></li>
-                            <li><a href="#" class="text-xs md:text-[13px] text-gray-500 dark:text-gray-400 font-light hover:text-brand-primary transition-colors break-words">Legal Disclaimer</a></li>
-                            <li><a href="#contact" class="text-xs md:text-[13px] text-gray-500 dark:text-gray-400 font-light hover:text-brand-primary transition-colors break-words">Support Portal</a></li>
                         </ul>
                     </div>
                 </div>
@@ -762,7 +712,7 @@
             </div>
         </footer>
 
-    </main>
+    </main> 
 
     <div id="asset-modal" class="fixed inset-0 z-[100] bg-white/95 dark:bg-brand-dark/95 backdrop-blur-xl hidden w-full h-full overflow-y-auto transition-opacity">
         <div class="max-w-screen-xl mx-auto px-4 lg:px-8 py-6 md:py-10 min-h-screen flex flex-col w-full">
@@ -777,7 +727,7 @@
                     <h2 id="modal-title" class="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4 leading-tight tracking-tight break-words w-full">Title</h2>
                     <p id="modal-desc" class="text-gray-600 dark:text-gray-400 text-xs md:text-sm lg:text-base mb-6 md:mb-10 leading-relaxed font-light break-words w-full">Description goes here.</p>
 
-                    <button id="primary-unlock-btn" class="w-full md:w-fit px-4 md:px-6 py-3 md:py-3.5 bg-brand-primary hover:bg-brand-primaryHover text-white rounded-lg font-semibold transition-all flex items-center justify-center gap-2 md:gap-3 mb-8 md:mb-12 text-xs md:text-sm shadow-sm cursor-pointer">
+                    <button id="primary-unlock-btn" class="w-full md:w-fit max-w-full px-4 md:px-6 py-3 md:py-3.5 bg-brand-primary hover:bg-brand-primaryHover text-white rounded-lg font-semibold transition-all flex items-center justify-center gap-2 md:gap-3 mb-8 md:mb-12 text-xs md:text-sm shadow-sm cursor-pointer">
                         <i id="primary-icon" class="fas fa-unlock-alt flex-shrink-0"></i> <span id="primary-btn-text" class="break-words">Unlock Asset Prompt</span>
                     </button>
 
@@ -811,13 +761,25 @@
                             </div>
 
                             <div id="prompt-state-unlocked" class="hidden w-full flex-col w-full">
-                                <div class="bg-white dark:bg-[#050505] p-3 md:p-4 lg:p-5 rounded-lg border border-gray-200 dark:border-brand-border mb-3 md:mb-4 max-h-[150px] overflow-y-auto custom-scrollbar w-full">
+                                <div id="capture-container" class="bg-white dark:bg-[#050505] p-4 md:p-5 rounded-lg border border-gray-200 dark:border-brand-border mb-3 md:mb-4 max-h-[150px] overflow-y-auto custom-scrollbar w-full">
                                     <p id="actual-prompt-text" class="text-gray-800 dark:text-gray-300 text-[10px] md:text-xs lg:text-sm leading-relaxed font-mono select-all break-words w-full"></p>
                                 </div>
-                                <button id="copy-unlocked-btn" class="w-full py-2.5 md:py-3 bg-brand-primary hover:bg-brand-primaryHover text-white rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 text-[10px] md:text-xs lg:text-sm shadow-sm">
-                                    <span id="copy-btn-text" class="break-words">Copy to Clipboard</span>
-                                    <i id="copy-btn-icon" class="far fa-copy flex-shrink-0"></i>
-                                </button>
+                                
+                                <div class="w-full flex flex-col gap-2">
+                                    <button id="copy-unlocked-btn" class="w-full py-2.5 md:py-3 bg-brand-primary hover:bg-brand-primaryHover text-white rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 text-[10px] md:text-xs lg:text-sm shadow-sm">
+                                        <span id="copy-btn-text" class="break-words">Copy Text</span>
+                                        <i id="copy-btn-icon" class="far fa-copy flex-shrink-0"></i>
+                                    </button>
+                                    
+                                    <div class="grid grid-cols-2 gap-2 w-full">
+                                        <button id="download-pdf-btn" class="w-full py-2.5 md:py-3 bg-gray-200 hover:bg-gray-300 dark:bg-[#151A2C] dark:hover:bg-[#1f253d] text-gray-900 dark:text-white rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 text-[10px] md:text-xs lg:text-sm shadow-sm">
+                                            <i class="far fa-file-pdf"></i> PDF
+                                        </button>
+                                        <button id="download-img-btn" class="w-full py-2.5 md:py-3 bg-gray-200 hover:bg-gray-300 dark:bg-[#151A2C] dark:hover:bg-[#1f253d] text-gray-900 dark:text-white rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 text-[10px] md:text-xs lg:text-sm shadow-sm">
+                                            <i class="far fa-image"></i> Image
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -838,41 +800,36 @@
         }
 
         window.addEventListener('load', () => {
-            window.scrollTo(0, 0); // Force top on load
+            window.scrollTo(0, 0);
             const loader = document.getElementById('intro-overlay');
             const percentText = document.getElementById('loading-percent');
             const loadingLine = document.getElementById('loading-line');
             const introAudio = document.getElementById('intro-audio');
             
-            // Try to play audio (will fail silently if browser blocks autoplay without interaction)
             if (introAudio) {
                 introAudio.volume = 0.4;
                 let playPromise = introAudio.play();
                 if (playPromise !== undefined) {
                     playPromise.catch(error => {
-                        console.log("Audio autoplay blocked by browser policy. Interaction needed first.");
+                        console.log("Audio autoplay blocked by browser policy.");
                     });
                 }
             }
             
-            // Lock scrolling while loading
             document.body.classList.add('overflow-hidden');
             
             let count = 0;
             
-            // Expand the loading line width
             setTimeout(() => {
                 loadingLine.style.width = "80%";
             }, 100);
 
-            // Fast counter from 0 to 100
             let counterInterval = setInterval(() => {
                 count += Math.floor(Math.random() * 5) + 2; 
                 if (count >= 100) {
                     count = 100;
                     clearInterval(counterInterval);
                     
-                    // Add a slight delay at 100% before sliding up
                     setTimeout(() => {
                         loader.classList.add('intro-slide-up');
                         
@@ -880,17 +837,14 @@
                             document.body.classList.remove('overflow-hidden');
                             loader.style.display = 'none';
                             
-                            // Force layout recalculation after loader unblocks body
-                            document.body.style.width = "100%"; 
-                            
-                            window.scrollTo(0, 0); // Force top before AOS
-                            AOS.init({ once: true, offset: 50 }); // Initialize site animations
-                        }, 1200); // Wait for slide up to finish
+                            window.scrollTo(0, 0); 
+                            AOS.init({ once: true, offset: 50 });
+                        }, 1200); 
                         
                     }, 400);
                 }
                 percentText.innerText = count;
-            }, 30); // Speed of the counter
+            }, 30); 
         });
 
         // Mobile Menu JS Logic
@@ -902,7 +856,7 @@
             mobileMenu.classList.toggle('flex');
         });
 
-        // Theme Toggle Logic (DARK BY DEFAULT)
+        // Theme Toggle Logic
         const themeToggleBtn = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
         const htmlElement = document.documentElement;
@@ -953,7 +907,7 @@
         const numCenter = document.getElementById('countdown-number');
         const numText = document.getElementById('countdown-text');
         
-        const currentPromptData = { text: "" };
+        const currentPromptData = { text: "", title: "" };
 
         document.querySelectorAll('.open-modal-btn').forEach(btn => {
             btn.addEventListener('click', function(e) {
@@ -963,7 +917,9 @@
                 document.getElementById('modal-category').innerText = this.getAttribute('data-category');
                 document.getElementById('modal-desc').innerText = this.getAttribute('data-desc');
                 document.getElementById('modal-image').src = this.getAttribute('data-img');
+                
                 currentPromptData.text = this.getAttribute('data-prompt');
+                currentPromptData.title = this.getAttribute('data-title').replace(/\s+/g, '-').toLowerCase();
 
                 resetModalUI();
                 modal.classList.remove('hidden');
@@ -1050,8 +1006,8 @@
             
             const copyText = document.getElementById('copy-btn-text');
             const copyIcon = document.getElementById('copy-btn-icon');
-            copyText.innerText = "Copy to Clipboard";
-            copyIcon.className = "far fa-copy";
+            copyText.innerText = "Copy Text";
+            copyIcon.className = "far fa-copy flex-shrink-0";
         }
 
         document.getElementById('copy-unlocked-btn').addEventListener('click', function() {
@@ -1060,14 +1016,79 @@
             
             navigator.clipboard.writeText(currentPromptData.text).then(() => {
                 copyText.innerText = 'COPIED!';
-                copyIcon.className = 'fas fa-check';
+                copyIcon.className = 'fas fa-check flex-shrink-0';
                 
                 setTimeout(() => {
-                    copyText.innerText = 'Copy to Clipboard';
-                    copyIcon.className = 'far fa-copy';
+                    copyText.innerText = 'Copy Text';
+                    copyIcon.className = 'far fa-copy flex-shrink-0';
                 }, 2000);
             });
         });
+
+        // ✅ NEW: Download Image Logic
+        document.getElementById('download-img-btn').addEventListener('click', function() {
+            const captureArea = document.getElementById('capture-container');
+            const originalMaxHeight = captureArea.style.maxHeight;
+            
+            // Temporarily remove scroll restriction for full capture
+            captureArea.style.maxHeight = 'none'; 
+            captureArea.style.overflow = 'visible';
+
+            html2canvas(captureArea, {
+                backgroundColor: htmlElement.classList.contains('dark') ? '#050505' : '#ffffff',
+                scale: 2 // High-res
+            }).then(canvas => {
+                let link = document.createElement('a');
+                link.download = `visionary-syntax-${currentPromptData.title}.png`;
+                link.href = canvas.toDataURL("image/png");
+                link.click();
+                
+                // Restore styling
+                captureArea.style.maxHeight = originalMaxHeight;
+                captureArea.style.overflow = 'auto';
+            });
+        });
+
+        // ✅ NEW: Download PDF Logic
+        document.getElementById('download-pdf-btn').addEventListener('click', function() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF({
+                orientation: "portrait",
+                unit: "mm",
+                format: "a4"
+            });
+
+            const captureArea = document.getElementById('capture-container');
+            const originalMaxHeight = captureArea.style.maxHeight;
+            
+            // Temporarily expand to capture full content
+            captureArea.style.maxHeight = 'none'; 
+            captureArea.style.overflow = 'visible';
+
+            html2canvas(captureArea, {
+                backgroundColor: htmlElement.classList.contains('dark') ? '#050505' : '#ffffff',
+                scale: 2
+            }).then(canvas => {
+                const imgData = canvas.toDataURL('image/png');
+                const imgProps = doc.getImageProperties(imgData);
+                const pdfWidth = doc.internal.pageSize.getWidth() - 20; // 10mm padding each side
+                const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+                
+                // Add header text
+                doc.setFontSize(16);
+                doc.text(`Visionary Syntax: ${currentPromptData.title.replace(/-/g, ' ').toUpperCase()}`, 10, 15);
+                
+                // Add image
+                doc.addImage(imgData, 'PNG', 10, 25, pdfWidth, pdfHeight);
+                
+                doc.save(`visionary-syntax-${currentPromptData.title}.pdf`);
+                
+                // Restore styling
+                captureArea.style.maxHeight = originalMaxHeight;
+                captureArea.style.overflow = 'auto';
+            });
+        });
+
     </script>
 </body>
 </html>
